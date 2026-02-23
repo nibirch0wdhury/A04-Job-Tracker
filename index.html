@@ -48,7 +48,7 @@
                 <div class="p-5 bg-white rounded-xl">
                     <p class="text-base font-medium text-gray-950">Interview</p>
                     <p
-                        id="Interview"
+                        id="interview"
                         class="text-green-500 font-bold text-2xl pt-1"
                     >
                         0
@@ -57,7 +57,7 @@
                 <div class="p-5 bg-white rounded-xl">
                     <p class="text-base font-medium text-gray-950">Rejected</p>
                     <p
-                        id="Rejected"
+                        id="rejected"
                         class="text-red-500 font-bold text-2xl pt-1"
                     >
                         0
@@ -66,7 +66,7 @@
             </div>
         </header>
         <hr class="my-8 w-[80%] mx-auto opacity-10" />
-        <section class="w-[80%] mx-auto">
+        <main class="w-[80%] mx-auto">
             <div class="flex justify-between">
                 <p class="text-blue-950 font-semibold text-xl">
                     Available Jobs
@@ -78,21 +78,23 @@
             </div>
 
             <div class="my-6">
-                <button class="bg-blue-500 text-white font-medium btn w-30">
+                <button onclick="toggle('all-btn')" id="all-btn" class="bg-blue-500 text-white font-medium btn w-30">
                     All
                 </button>
                 <button
-                    class="bg-white btn text-gray-500 font-medium w-30 mx-1"
+                    onclick="toggle('interview-btn')" id="interview-btn" class="bg-white btn text-gray-500 font-medium w-30 mx-1"
                 >
                     Interview
                 </button>
-                <button class="bg-white btn text-gray-500 font-medium w-30">
+                <button onclick="toggle('rejected-btn')" id="rejected-btn" class="bg-white btn text-gray-500 font-medium w-30">
                     Rejected
                 </button>
             </div>
 
-            <div class="cards space-y-4">
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+            <div id="allCards" class="cards space-y-4 pb-16">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -103,7 +105,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -120,12 +126,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -136,7 +144,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -153,12 +165,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -169,7 +183,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -186,12 +204,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -202,7 +222,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -219,12 +243,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -235,7 +261,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -252,12 +282,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -268,7 +300,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -285,12 +321,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -301,7 +339,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -318,12 +360,14 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                <div class="bg-white w-full flex justify-between p-6 rounded-xl">
+                <div
+                    class="bg-white w-full flex justify-between p-6 rounded-xl"
+                >
                     <div class="left flex-1">
                         <h5 class="text-blue-950 font-semibold text-xl">
                             Mobile First Corp
@@ -334,7 +378,11 @@
                             Remote • Full-time • $130,000 - $175,000
                         </p>
                         <br />
-                        <div class="btn mb-2 bg-blue-100 text-blue-950 font-semibold">NOT APPLIED</div>
+                        <div
+                            class="btn mb-2 bg-blue-100 text-blue-950 font-semibold"
+                        >
+                            NOT APPLIED
+                        </div>
                         <p class="text-gray-500 mb-5">
                             Build cross-platform mobile applications using React
                             Native. Work on products used by millions of users
@@ -351,13 +399,13 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full ">
+                        <button class="btn rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
                 </div>
-                
             </div>
-        </section>
+        </main>
+        <script src="./script.js"></script>
     </body>
 </html>
