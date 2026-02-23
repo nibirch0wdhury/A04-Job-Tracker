@@ -3,6 +3,7 @@ let rejectedList = [];
 let currentStatus = "all";
 
 let total = document.getElementById("total");
+let total2 = document.getElementById("total2");
 let interviewCount = document.getElementById("interview");
 let rejectedCount = document.getElementById("rejected");
 
@@ -18,6 +19,13 @@ function calculateCount() {
     total.innerText = allCard.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
+    if (currentStatus === "interview-btn") {
+        total2.innerText = interviewList.length;
+    } else if (currentStatus === "rejected-btn") {
+        total2.innerText = rejectedList.length;
+    } else {
+        total2.innerText = allCard.children.length;
+    }
 }
 calculateCount();
 
@@ -48,6 +56,7 @@ function toggle(id) {
         filter.classList.remove("hidden");
         renderReject();
     }
+    calculateCount();
 }
 
 main.addEventListener("click", function (event) {
@@ -164,6 +173,7 @@ function renderInterview() {
                     </div>
         `;
         filter.appendChild(div);
+        
     }
 }
 function renderReject() {
