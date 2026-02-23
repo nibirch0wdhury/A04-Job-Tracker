@@ -1,11 +1,10 @@
 let interviewList = [];
 let rejectedList = [];
-let currentStatus = 'all';
+let currentStatus = "all";
 
 let total = document.getElementById("total");
 let interviewCount = document.getElementById("interview");
 let rejectedCount = document.getElementById("rejected");
-
 
 const allCard = document.getElementById("allCards");
 const main = document.querySelector("main");
@@ -83,7 +82,7 @@ main.addEventListener("click", function (event) {
         rejectedList = rejectedList.filter(
             (item) => item.companyName != cardInfo.companyName,
         );
-        if(currentStatus == 'rejected-btn'){
+        if (currentStatus == "rejected-btn") {
             renderReject();
         }
         calculateCount();
@@ -118,7 +117,7 @@ main.addEventListener("click", function (event) {
         interviewList = interviewList.filter(
             (item) => item.companyName != cardInfo.companyName,
         );
-        if(currentStatus == 'interview-btn'){
+        if (currentStatus == "interview-btn") {
             renderInterview();
         }
         calculateCount();
@@ -141,7 +140,7 @@ function renderInterview() {
                         </p>
                         <br />
                         <div
-                            class="btn mb-2 btn-status bg-blue-100 text-blue-950 font-semibold"
+                            class="badge  mb-2 btn-status bg-blue-100 text-blue-950 font-semibold"
                         >
                             ${inter.status}
                         </div>
@@ -183,7 +182,7 @@ function renderReject() {
                         </p>
                         <br />
                         <div
-                            class="btn mb-2 btn-status bg-blue-100 text-blue-950 font-semibold"
+                            class="badge  mb-2 btn-status bg-blue-100 text-blue-950 font-semibold"
                         >
                             ${inter.status}
                         </div>
