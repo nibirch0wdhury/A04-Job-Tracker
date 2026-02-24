@@ -11,6 +11,7 @@ let rejectedCount = document.getElementById("rejected");
 const allCard = document.getElementById("allCards");
 const main = document.querySelector("main");
 const filter = document.getElementById("filtered-section");
+const noCards = document.querySelector(".no-cards");
 
 const allBtn = document.getElementById("all-btn");
 const interviewBtn = document.getElementById("interview-btn");
@@ -49,15 +50,29 @@ function toggle(id) {
         allCard.classList.add("hidden");
         filter.classList.remove("hidden");
         renderInterview();
-    } else if (id == "all-btn") {
+        checkEmptyState(filter);
+    } 
+    else if (id == "all-btn") {
         allCard.classList.remove("hidden");
         filter.classList.add("hidden");
-    } else if (id == "rejected-btn") {
+        checkEmptyState(allCard);
+    } 
+    else if (id == "rejected-btn") {
         allCard.classList.add("hidden");
         filter.classList.remove("hidden");
         renderReject();
+        checkEmptyState(filter);
     }
+
     calculateCount();
+}
+
+function checkEmptyState(container) {
+    if (container.children.length === 0) {
+        noCards.classList.remove("hidden");
+    } else {
+        noCards.classList.add("hidden");
+    }
 }
 
 main.addEventListener("click", function (event) {
@@ -157,10 +172,15 @@ main.addEventListener("click", function (event) {
 
         if (currentStatus === "interview-btn") {
             renderInterview();
+            checkEmptyState(filter);
         } else if (currentStatus === "rejected-btn") {
             renderReject();
+            checkEmptyState(filter);
         }
-        
+        else{
+            checkEmptyState(allCard);
+        }
+
         calculateCount();
     }
 });
@@ -206,6 +226,7 @@ function renderInterview() {
         `;
         filter.appendChild(div);
     }
+    checkEmptyState(filter);
 }
 function renderReject() {
     filter.innerHTML = "";
@@ -248,4 +269,5 @@ function renderReject() {
         `;
         filter.appendChild(div);
     }
+    checkEmptyState(filter);
 }

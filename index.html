@@ -66,7 +66,7 @@
             </div>
         </header>
         <hr class="my-8 w-[80%] mx-auto opacity-10" />
-        <main class="w-[80%] mx-auto">
+        <main class="w-[80%] mx-auto min-h-[70vh]">
             <div class="flex justify-between">
                 <p class="text-blue-950 font-semibold text-xl">
                     Available Jobs
@@ -102,9 +102,9 @@
             </div>
             <section
                 id="filtered-section"
-                class="space-y-4 hidden min-h-[65vh]"
+                class="space-y-4 hidden "
             ></section>
-            <div id="allCards" class="min-h-[65vh] cards space-y-4 pb-16">
+            <div id="allCards" class=" cards space-y-4 pb-16">
                 <div
                     class="bg-white w-full flex justify-between p-6 rounded-xl"
                 >
@@ -450,6 +450,13 @@
                     </div>
                 </div>
             </div>
+            <section class="no-cards w-full hidden">
+                <div class="container bg-white py-28  mx-auto text-center">
+                    <img src="./Assets/jobs.png" alt="" class="mx-auto mb-5">
+                    <h2 class="text-blue-950 font-semibold text-2xl">No jobs available</h2>
+                    <p class="text-xl text-gray-700 opacity-65">Check back soon for new job opportunities</p>
+                </div>
+            </section>
         </main>
         <script src="./script.js"></script>
     </body>
