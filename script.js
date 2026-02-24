@@ -74,6 +74,10 @@ main.addEventListener("click", function (event) {
         const status = parenNode.querySelector(".btn-status").innerText;
         parenNode.querySelector(".btn-status").innerText = "INTERVIEW";
 
+        parenNode.querySelector(".btn-status").classList.remove('bg-blue-100');
+        parenNode.querySelector(".btn-status").classList.remove('bg-red-200');
+        parenNode.querySelector(".btn-status").classList.add('bg-green-200');
+
         const cardInfo = {
             companyName,
             positionName,
@@ -108,6 +112,10 @@ main.addEventListener("click", function (event) {
             parenNode.querySelector(".position-des").innerText;
         const status = parenNode.querySelector(".btn-status").innerText;
         parenNode.querySelector(".btn-status").innerText = "REJECTED";
+
+        parenNode.querySelector(".btn-status").classList.remove('bg-green-200');
+        parenNode.querySelector(".btn-status").classList.remove('bg-blue-100');
+        parenNode.querySelector(".btn-status").classList.add('bg-red-200');
 
         const cardInfo = {
             companyName,
@@ -149,7 +157,7 @@ function renderInterview() {
                         </p>
                         <br />
                         <div
-                            class="badge  mb-2 btn-status bg-blue-100 text-blue-950 font-semibold"
+                            class="badge  mb-2 btn-status bg-green-200 text-blue-950 font-semibold"
                         >
                             ${inter.status}
                         </div>
@@ -192,7 +200,7 @@ function renderReject() {
                         </p>
                         <br />
                         <div
-                            class="badge  mb-2 btn-status bg-blue-100 text-blue-950 font-semibold"
+                            class="badge  mb-2 btn-status bg-red-200 text-blue-950 font-semibold"
                         >
                             ${inter.status}
                         </div>
