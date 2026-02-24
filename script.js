@@ -1,5 +1,6 @@
 let interviewList = [];
 let rejectedList = [];
+let deletedList = [];
 let currentStatus = "all";
 
 let total = document.getElementById("total");
@@ -74,9 +75,9 @@ main.addEventListener("click", function (event) {
         const status = parenNode.querySelector(".btn-status").innerText;
         parenNode.querySelector(".btn-status").innerText = "INTERVIEW";
 
-        parenNode.querySelector(".btn-status").classList.remove('bg-blue-100');
-        parenNode.querySelector(".btn-status").classList.remove('bg-red-200');
-        parenNode.querySelector(".btn-status").classList.add('bg-green-200');
+        parenNode.querySelector(".btn-status").classList.remove("bg-blue-100");
+        parenNode.querySelector(".btn-status").classList.remove("bg-red-200");
+        parenNode.querySelector(".btn-status").classList.add("bg-green-200");
 
         const cardInfo = {
             companyName,
@@ -113,9 +114,9 @@ main.addEventListener("click", function (event) {
         const status = parenNode.querySelector(".btn-status").innerText;
         parenNode.querySelector(".btn-status").innerText = "REJECTED";
 
-        parenNode.querySelector(".btn-status").classList.remove('bg-green-200');
-        parenNode.querySelector(".btn-status").classList.remove('bg-blue-100');
-        parenNode.querySelector(".btn-status").classList.add('bg-red-200');
+        parenNode.querySelector(".btn-status").classList.remove("bg-green-200");
+        parenNode.querySelector(".btn-status").classList.remove("bg-blue-100");
+        parenNode.querySelector(".btn-status").classList.add("bg-red-200");
 
         const cardInfo = {
             companyName,
@@ -137,6 +138,29 @@ main.addEventListener("click", function (event) {
         if (currentStatus == "interview-btn") {
             renderInterview();
         }
+        calculateCount();
+    } else if (event.target.classList.contains("btn-delete")) {
+        const card = event.target.closest(".bg-white");
+        if (!card) return;
+
+        const parenNode = card.querySelector(".infos");
+        const companyName = parenNode.querySelector(".company-name").innerText;
+
+        interviewList = interviewList.filter(
+            (item) => item.companyName !== companyName,
+        );
+        rejectedList = rejectedList.filter(
+            (item) => item.companyName !== companyName,
+        );
+
+        card.remove();
+
+        if (currentStatus === "interview-btn") {
+            renderInterview();
+        } else if (currentStatus === "rejected-btn") {
+            renderReject();
+        }
+        
         calculateCount();
     }
 });
@@ -181,7 +205,6 @@ function renderInterview() {
                     </div>
         `;
         filter.appendChild(div);
-        
     }
 }
 function renderReject() {
