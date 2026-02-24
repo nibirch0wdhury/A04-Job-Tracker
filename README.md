@@ -1,5 +1,4 @@
 1. Difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll
-
 getElementById is used to select one element using its unique id. Since id is always unique, it returns only one element.
 getElementsByClassName is used to select elements using their class name. It can return multiple elements because many elements can have the same class.
 querySelector is used to select the first element that matches a CSS selector. It is more flexible because it can select by id, class, or tag.
