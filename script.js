@@ -51,13 +51,11 @@ function toggle(id) {
         filter.classList.remove("hidden");
         renderInterview();
         checkEmptyState(filter);
-    } 
-    else if (id == "all-btn") {
+    } else if (id == "all-btn") {
         allCard.classList.remove("hidden");
         filter.classList.add("hidden");
         checkEmptyState(allCard);
-    } 
-    else if (id == "rejected-btn") {
+    } else if (id == "rejected-btn") {
         allCard.classList.add("hidden");
         filter.classList.remove("hidden");
         renderReject();
@@ -176,8 +174,7 @@ main.addEventListener("click", function (event) {
         } else if (currentStatus === "rejected-btn") {
             renderReject();
             checkEmptyState(filter);
-        }
-        else{
+        } else {
             checkEmptyState(allCard);
         }
 
