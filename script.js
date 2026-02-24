@@ -219,7 +219,7 @@ function renderInterview() {
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full">
+                        <button class="btn btn-delete btn-secondary btn-soft rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
@@ -262,7 +262,7 @@ function renderReject() {
                         </div>
                     </div>
                     <div class="right">
-                        <button class="btn rounded-full">
+                        <button class="btn btn-delete btn-secondary btn-soft rounded-full">
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
